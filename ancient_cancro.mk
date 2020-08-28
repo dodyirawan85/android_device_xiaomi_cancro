@@ -16,10 +16,15 @@
 # Inherit from cancro device
 $(call inherit-product, device/xiaomi/cancro/cancro.mk)
 
-# Inherit some common Mokee stuff.
-$(call inherit-product, vendor/mokee/config/common_full_phone.mk)
+# Inherit some common Ancient stuff.
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
 
-PRODUCT_NAME := mokee_cancro
+# Use Gapps
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm
+IS_PHONE := true
+
+PRODUCT_NAME := ancient_cancro
 PRODUCT_DEVICE := cancro
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
